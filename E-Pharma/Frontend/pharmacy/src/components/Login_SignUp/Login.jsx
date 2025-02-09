@@ -33,8 +33,8 @@ const Login = () => {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Login failed");
 
-      localStorage.setItem("token", data.token);
-      localStorage.setItem("userName", data.userName);
+      // localStorage.setItem("token", data.token);
+      // localStorage.setItem("userName", data.userName);
       setUserName(data.userName);
       setSuccessMessage("Login Successful!");
       setTimeout(() => navigate("/"), 2000);
@@ -43,12 +43,12 @@ const Login = () => {
     }
   };
 
-  useEffect(() => {
-    const storedUserName = localStorage.getItem("userName");
-    if (storedUserName) {
-      setUserName(storedUserName);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const storedUserName = localStorage.getItem("userName");
+  //   if (storedUserName) {
+  //     setUserName(storedUserName);
+  //   }
+  // }, []);
 
   const handleGoogleLogin = () => {
     setError("Google Login is not integrated yet.");
@@ -59,7 +59,6 @@ const Login = () => {
       <h2 className="title">Sign in</h2>
       {error && <p className="error">{error}</p>}
       {successMessage && <p className="success" style={{ color: "green", fontWeight: "bold" }}>{successMessage}</p>}
-      {userName && <p className="user-name">Welcome, {userName}!</p>}
 
       <div className="input-field">
         <i className="fas fa-user"></i>

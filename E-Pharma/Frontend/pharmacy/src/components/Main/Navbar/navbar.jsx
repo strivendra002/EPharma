@@ -106,7 +106,7 @@ const Navbar = () => {
             </Link>
             {isAuthenticated ? (
               <div className="profile-section">
-                <span className="user-name">Hello, {userName}!</span>
+                <span className="user-name">Hello</span>
                 <button className="profile-btn" onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}>
                   <img src={profileIcon} alt="Profile" className="profile-icon" />
                 </button>

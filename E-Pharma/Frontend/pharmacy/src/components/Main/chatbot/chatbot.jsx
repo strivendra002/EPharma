@@ -135,7 +135,7 @@ const Chatbot = () => {
         </div>
       ) : (
         <img
-          src={chatbotClosedIcon}
+          src={chatbotIcon}
           alt="Chatbot Icon"
           className="chatbot-closed-icon"
           onClick={() => setIsOpen(true)}
