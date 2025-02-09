@@ -7,20 +7,27 @@ PurePharma is a comprehensive solution for purchasing health and wellness produc
 ## Features
 
 ### Front-End
+
 - Built using **React**, **HTML**, **CSS**, and **JavaScript**.
 - Fully responsive design for seamless use across devices.
 - Interactive UI for product browsing, filtering, and purchasing.
 - Dynamic loading of product data from the back-end.
+- **Grant Current Location**: Users can share their location for localized product availability and delivery options.
 
 ### Back-End
+
 - Developed with **Node.js** and **Express.js**.
 - RESTful API to manage product data.
 - Data stored in **MongoDB** for scalability.
 - Deployed on **Render** for high availability.
+- **Forgot Password with Email**: Secure password recovery system using email verification.
+- **OCR Integration**: Scan prescriptions and upload them for quick ordering.
+- **AI Chatbot**: Integrated chatbot for answering queries and guiding users.
 
 ### Core Functionalities
 
 ### 🛒 **E-commerce Functionality**
+
 - **Search Products**: Quickly find products using advanced search functionality.
 - **Filtering Options**: Filter products by:
   - Categories: Medicines, wellness products, etc.
@@ -29,21 +36,29 @@ PurePharma is a comprehensive solution for purchasing health and wellness produc
   - Price (Low to High / High to Low).
 
 ### 👤 **User Authentication**
+
 - Secure **Login** and **Signup** functionality.
 - Manage user accounts and access personalized features like order history.
+- **Forgot Password**: Allows users to reset their password via email verification.
 
 ### 📱 **Responsive Design**
+
 - Fully responsive UI for a seamless experience on desktops, tablets, and smartphones.
+- **Grant Current Location**: Users can opt to share their real-time location for personalized shopping and delivery.
 
 ### 🩺 **Integrated Healthcare Services**
+
 - **Video Consultations**: Schedule virtual appointments with healthcare professionals.
 - **Hospital Appointments**: Book in-person appointments directly through the platform.
+- **OCR Support**: Users can scan prescriptions and order medicines automatically.
+- **AI Chatbot**: Provides instant assistance, FAQs, and customer support.
 
 ---
 
 ## Tech Stack
 
 ### Front-End
+
 - **React**: Framework for building dynamic user interfaces.
 - **HTML**: Markup language for the structure.
 - **CSS**: Styling for layout and design.
@@ -51,59 +66,73 @@ PurePharma is a comprehensive solution for purchasing health and wellness produc
 - **Netlify**: Front-end hosting platform.
 
 ### Back-End
+
 - **Node.js**: Server-side runtime environment.
 - **Express.js**: Framework for building RESTful APIs.
 - **MongoDB**: NoSQL database for storing product and user data.
 - **Render**: Back-end hosting platform.
+- **Nodemailer**: Sends password reset emails.
+- **Tesseract.js**: OCR functionality for prescription scanning.
+- **Dialogflow/OpenAI API**: AI-powered chatbot integration.
 
 ---
 
 ## Deployment
 
 ### Front-End
-- **Netlify**:(https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/)
+
+- **Netlify**: ([https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/](https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/))
   - Features continuous deployment directly from the GitHub repository.
   - Deployed using optimized build settings for performance.
 
 ### Back-End
-- **Render**: (https://the-backenders-043-1.onrender.com)
+
+- **Render**: ([https://the-backenders-043-1.onrender.com](https://the-backenders-043-1.onrender.com))
   - Set up with environment variables for secure configuration.
   - Auto-deployment from the GitHub repository.
-  - For Code Please Refer to https://github.com/rahulsharma998/The_Backenders_043
+  - For Code Please Refer to [https://github.com/strivendra002/The\_Backenders\_043](https://github.com/strivendra002/Epharma)
 
 ---
 
 ## Installation and Setup
 
 ### Prerequisites
+
 - Node.js and npm installed.
 - MongoDB instance (local or cloud-based).
 
 ### Setup
+
 1. Clone the repository: for Frontend
+
    ```bash
-   git clone (https://github.com/rahulsharma998/The-Backenders-Web_043/)
+   git clone https://github.com/strivendra002/EPharma/
    ```
 
-1. Clone the repository: for Backend
+2. Clone the repository: for Backend
+
    ```bash
-   git clone (https://the-backenders-043-1.onrender.com)
+   git clone https://github.com/strivendra002/EPharma/
    ```
+
 3. Install dependencies:
+
    ```bash
    npm install
    ```
 
 4. Start the server:
+
    ```bash
    npm start
    ```
 
-
+---
 
 ## API Endpoints
 
 ### Products
+
 - `GET /products`: Fetch all products.
 - `GET /products/:id`: Fetch a specific product by ID.
 - `POST /products`: Add a new product (Admin only).
@@ -111,53 +140,76 @@ PurePharma is a comprehensive solution for purchasing health and wellness produc
 - `DELETE /products/:id`: Delete a product (Admin only).
 
 ### User Authentication
+
 - `POST /register`: Register a new user.
 - `POST /login`: User login.
+- `POST /forgot-password`: Initiate password reset via email.
+- `POST /reset-password`: Complete password reset with a new password.
+
+### AI Chatbot
+
+- `POST /chat`: Get AI-powered assistance.
+
+### OCR Functionality
+
+- `POST /upload-prescription`: Scan and process prescription for orders.
 
 ---
 
 ## Live Links
-- **Frontend (Netlify)**: (https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/)
-- **Backend (Render)**: (https://the-backenders-043-1.onrender.com)
+
+- **Frontend (Netlify)**: ([https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/](https://6768f3ab44e08bdb6d2280c0--candid-mooncake-e8530d.netlify.app/))
+- **Backend (Render)**: ([https://the-backenders-043-1.onrender.com](https://the-backenders-043-1.onrender.com))
 
 ---
 
 ## Screenshots
 
 ### Home Page
-![Home Page](https://github.com/rahulsharma998/The-Backenders-Web_043/blob/main/Frontend/pharmacy/public/photos/Screenshot%202024-12-23%20090829.png)
+
+
 
 ### Product Catalog
-![Product Catalog](https://github.com/rahulsharma998/The-Backenders-Web_043/blob/main/Frontend/pharmacy/public/photos/Screenshot%202024-12-23%20090857.png)
+
+
 
 ### Shopping Cart
-![Shopping Cart](https://github.com/rahulsharma998/The-Backenders-Web_043/blob/main/Frontend/pharmacy/public/photos/Screenshot%202024-12-23%20090934.png)
+
+
 
 ### Admin Panel
-![Admin Panel](https://github.com/rahulsharma998/The-Backenders-Web_043/blob/main/Frontend/pharmacy/public/photos/Screenshot%202024-12-23%20090843.png)
+
+
 
 ---
 
 ## Team Members
+
 This project was collaboratively developed by a team of 4 members:
-1. Rahul Sharma
-2. Shivam Gurjar
-3. Pritam
+
+1. Ranajit Bengal
+2. Lokesh
+3. Trivendra
 4. Shivam Gopal
+5. Manish
 
 ---
 
 ## Future Enhancements
+
 - Add payment gateway integration for seamless checkout.
 - Implement user profiles with order history.
 - Include product reviews and ratings.
 - Real-time order tracking with delivery notifications.
+- **Voice Search for products**.
+- **Integration with health tracking apps**.
 
 ---
 
 ## Contributing
 
 Contributions are welcome! Follow these steps:
+
 1. Fork the repository.
 2. Create a new branch:
    ```bash
@@ -172,7 +224,6 @@ Contributions are welcome! Follow these steps:
    git push origin feature-name
    ```
 
-
 ---
 
 ## License
@@ -182,6 +233,7 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 ## Acknowledgments
+
 - MongoDB for database support.
 - Netlify and Render for deployment platforms.
 - Open source libraries and tools used in this project.
@@ -189,4 +241,5 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 Feel free to reach out for any queries or suggestions!
+GitHub: [https://github.com/strivendra002/EPharma](https://github.com/strivendra002/EPharma)
 
