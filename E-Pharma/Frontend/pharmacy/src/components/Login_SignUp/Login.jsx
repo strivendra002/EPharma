@@ -33,8 +33,8 @@ const Login = () => {
       const data = await response.json();
       if (!response.ok) throw new Error(data.message || "Login failed");
 
-      // localStorage.setItem("token", data.token);
-      // localStorage.setItem("userName", data.userName);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("userName", data.userName);
       setUserName(data.userName);
       setSuccessMessage("Login Successful!");
       setTimeout(() => navigate("/"), 2000);
@@ -43,22 +43,45 @@ const Login = () => {
     }
   };
 
-  // useEffect(() => {
-  //   const storedUserName = localStorage.getItem("userName");
-  //   if (storedUserName) {
-  //     setUserName(storedUserName);
-  //   }
-  // }, []);
-
-  const handleGoogleLogin = () => {
-    setError("Google Login is not integrated yet.");
+  const handleForgotPassword = async () => {
+    if (!email) {
+      setError("Please enter your email to reset password.");
+      return;
+    }
+  
+    try {
+      const response = await fetch(
+        "https://online-pharmacy-jwkq.onrender.com/api/users/forget_password",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }
+      );
+  
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message || "Failed to reset password");
+  
+      setSuccessMessage("Password reset email sent. Check your inbox.");
+    } catch (err) {
+      setError(err.message);
+    }
   };
+  
+
+  useEffect(() => {
+    const storedUserName = localStorage.getItem("userName");
+    if (storedUserName) {
+      setUserName(storedUserName);
+    }
+  }, []);
 
   return (
     <form action="#" className="sign-in-form" onSubmit={handleLogin}>
       <h2 className="title">Sign in</h2>
       {error && <p className="error">{error}</p>}
       {successMessage && <p className="success" style={{ color: "green", fontWeight: "bold" }}>{successMessage}</p>}
+      {userName && <p className="user-name">Welcome, {userName}!</p>}
 
       <div className="input-field">
         <i className="fas fa-user"></i>
@@ -83,38 +106,9 @@ const Login = () => {
       </div>
 
       <input type="submit" value="Login" className="btn solid" />
-
-      <div>
-        <button
-          type="button"
-          className="btn"
-          style={{ width: "50px", margin: "5px" }}
-          onClick={handleGoogleLogin}
-        >
-          <i className="fab fa-google"></i>
-        </button>
-        <button
-          type="button"
-          className="btn"
-          style={{ width: "50px", margin: "5px" }}
-        >
-          <i className="fab fa-facebook-f"></i>
-        </button>
-        <button
-          type="button"
-          className="btn"
-          style={{ width: "50px", margin: "5px" }}
-        >
-          <i className="fab fa-twitter"></i>
-        </button>
-        <button
-          type="button"
-          className="btn"
-          style={{ width: "50px", margin: "5px" }}
-        >
-          <i className="fab fa-linkedin-in"></i>
-        </button>
-      </div>
+      <button type="button" className="btn forgot-password" onClick={handleForgotPassword}>
+        Forgot Password?
+      </button>
     </form>
   );
 };
