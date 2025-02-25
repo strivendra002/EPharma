@@ -163,38 +163,6 @@ PurePharma is a comprehensive solution for purchasing health and wellness produc
 
 ---
 
-## Screenshots
-
-### Home Page
-
-
-
-### Product Catalog
-
-
-
-### Shopping Cart
-
-
-
-### Admin Panel
-
-
-
----
-
-## Team Members
-
-This project was collaboratively developed by a team of 4 members:
-
-1. Ranajit Bengal
-2. Lokesh
-3. Trivendra
-4. Shivam Gopal
-5. Manish
-
----
-
 ## Future Enhancements
 
 - Add payment gateway integration for seamless checkout.
@@ -226,9 +194,6 @@ Contributions are welcome! Follow these steps:
 
 ---
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
