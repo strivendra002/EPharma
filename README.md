@@ -51,3 +51,17 @@ npm install
 
 cd ../client
 npm install
+
+
+
+👨‍💻 Author
+
+Trivendra Kumar
+
+🌐 Portfolio - https://portfolio-two-pi-ejaoseqvam.vercel.app/
+
+💼 LinkedIn - https://www.linkedin.com/in/trivendra-kumar-b9302a226/
+
+💻 GitHub - https://github.com/strivendra002/
+
+📫 Reach me: strivendra002@gmail.com
